@@ -4,14 +4,13 @@ Library    SeleniumLibrary
 Suite Teardown    Close browser
 
 *** Variables ***
-${SiteUrl}     file:///C:/Users/student/PycharmProjects/SwagLabs/docs/swag_labs.html
+${SiteUrl}     https://elenabrotkin.github.io/SwagLabsDemo/swag_labs.html
 ${Browser}     headlesschrome
 
 *** Test Cases ***
 Logging Test
     Open browser    ${SiteUrl}  ${Browser}
     Maximize browser window
-    Wait until element is visible   id=login-button
     Input text    id:username   standard_user
     Input text    id:password   secret_sauce
     Click button    id:login-button
