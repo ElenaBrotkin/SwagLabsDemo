@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 Suite Teardown    Close browser
 
 *** Variables ***
-${SiteUrl}     file:///C:/Users/student/Downloads/swag_labs%20(1).html
+${SiteUrl}     file:///C:/Users/student/PycharmProjects/SwagLabs/docs/swag_labs.html
 ${Browser}     headlesschrome
 
 *** Test Cases ***
