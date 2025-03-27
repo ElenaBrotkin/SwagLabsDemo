@@ -12,7 +12,7 @@ Logging Test
     Open browser    ${SiteUrl}  ${Browser}
     Maximize browser window
     Input text    id:username   standard_user
-    Input text    id:password   secret_sauce
+    Input text    id:password   secretsauce
     Click button    id:login-button
     Sleep   2
 
