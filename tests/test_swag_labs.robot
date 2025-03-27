@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 Suite Teardown    Close browser
 
 *** Variables ***
-${SiteUrl}     https://elenabrotkin.github.io/SwagLabsDemo/swag_labs.html
+${SiteUrl}     file://${CURDIR}/../docs/swag_labs.html
 ${Browser}     headlesschrome
 
 *** Test Cases ***
@@ -14,6 +14,7 @@ Logging Test
     Input text    id:username   standard_user
     Input text    id:password   secret_sauce
     Click button    id:login-button
+    Wait until element is visible    id:products-grid
     Sleep   2
 
 Shopping Cart Test
@@ -33,5 +34,5 @@ Checkout Test
     Click button    xpath://*[@id="checkout-page"]/div[2]/button
 
 Confirmation Test
-    Wait until page contains    Thank You For Your Order!
+    Wait until element is visible    id:confirmation-page
 
