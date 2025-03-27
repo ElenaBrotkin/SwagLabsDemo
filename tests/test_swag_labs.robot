@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 Suite Teardown    Close browser
 
 *** Variables ***
-${SiteUrl}     https://elenabrotkin.github.io/SwagLabsDemo/swag_labs.html
+${SiteUrl}     file://${CURDIR}/../docs/swag_labs.html
 ${Browser}     headlesschrome
 
 *** Test Cases ***
@@ -12,7 +12,7 @@ Logging Test
     Open browser    ${SiteUrl}  ${Browser}
     Maximize browser window
     Input text    id:username   standard_user
-    Input text    id:password   secretsauce
+    Input text    id:password   secret_sauce
     Click button    id:login-button
     Sleep   2
 
