@@ -14,6 +14,7 @@ Logging Test
     Input text    id:username   standard_user
     Input text    id:password   secret_sauce
     Click button    id:login-button
+    Wait until element is visible    id:products-grid
     Sleep   2
 
 Shopping Cart Test
@@ -33,5 +34,5 @@ Checkout Test
     Click button    xpath://*[@id="checkout-page"]/div[2]/button
 
 Confirmation Test
-    Wait until element is visible    id:confirmation page
+    Wait until element is visible    id:confirmation-page
 
